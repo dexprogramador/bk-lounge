@@ -21,13 +21,11 @@ body {
   pointer-events: none;
 }
 
-/* EFEITO NEON NOS TÍTULOS */
 h1, h2 {
   color: #0fffc1;
   text-shadow: 0 0 8px #0fffc1, 0 0 20px #0fffc1;
 }
 
-/* NAVBAR FIXA */
 .navbar {
   position: fixed;
   top: 0;
@@ -144,7 +142,6 @@ h1, h2 {
   color: #fff;
 }
 
-/* Ranking */
 .ranking {
   padding: 60px 20px;
   text-align: center;
@@ -170,13 +167,17 @@ h1, h2 {
 .ranking-carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 200%;
 }
 
-.ranking-carousel img {
+.slide {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
   flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 12px;
   box-shadow: 0 0 15px #00000066;
 }
 
@@ -208,7 +209,6 @@ h1, h2 {
   right: -10px;
 }
 
-/* Sobre */
 .sobre {
   display: flex;
   flex-wrap: wrap;
@@ -235,7 +235,6 @@ h1, h2 {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Localização */
 .localizacao {
   padding: 60px 20px;
   text-align: center;
@@ -251,7 +250,6 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-/* Contato */
 .contato {
   padding: 60px 20px;
   text-align: center;
@@ -267,14 +265,12 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-/* Ícones */
 .icon {
   width: 28px;
   height: 28px;
   filter: invert(1);
 }
 
-/* WhatsApp flutuante */
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
