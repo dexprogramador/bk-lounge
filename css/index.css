@@ -3,7 +3,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #000;
+  background: radial-gradient(circle at center, #000, #0a0a0a);
+  background-attachment: fixed;
   color: #fff;
   scroll-behavior: smooth;
 }
@@ -18,6 +19,12 @@ body {
   z-index: -1;
   opacity: 0.15;
   pointer-events: none;
+}
+
+/* EFEITO NEON NOS TÍTULOS */
+h1, h2 {
+  color: #0fffc1;
+  text-shadow: 0 0 8px #0fffc1, 0 0 20px #0fffc1;
 }
 
 /* NAVBAR FIXA */
@@ -67,6 +74,7 @@ body {
   padding: 8px 16px;
   border-radius: 999px;
   animation: pulseGlow 1.5s infinite;
+  box-shadow: 0 0 12px #0fffc1;
 }
 
 @keyframes pulseGlow {
@@ -128,6 +136,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.3s ease;
+  box-shadow: 0 0 15px #0fffc1;
 }
 
 .btn-cta:hover {
@@ -151,21 +160,52 @@ body {
   gap: 10px;
 }
 
+.ranking-carousel-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .ranking-carousel {
   display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  padding: 20px 0;
-  scroll-snap-type: x mandatory;
-  justify-content: center;
+  transition: transform 0.5s ease-in-out;
 }
 
 .ranking-carousel img {
-  height: 250px;
-  flex-shrink: 0;
-  scroll-snap-align: center;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
+  flex-shrink: 0;
   box-shadow: 0 0 15px #00000066;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0fffc1;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.carousel-btn.prev {
+  left: -10px;
+}
+
+.carousel-btn.next {
+  right: -10px;
 }
 
 /* Sobre */
