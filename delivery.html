@@ -1,0 +1,114 @@
+<!-- Estrutura visual do delivery.html com fundo grafite e logo BK -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BK Delivery</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/delivery.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('/assets/images/bg-delivery.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .logo-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .logo-container img {
+      width: 120px;
+      max-width: 80vw;
+      filter: drop-shadow(0 0 10px #000);
+    }
+
+    main, header, section {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      color: #fff;
+    }
+
+    h1, h2 {
+      color: #fff;
+      text-shadow: 0 0 5px #000;
+    }
+
+    #categorias, #produtos, #carrinho, #finalizar-pedido {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="logo-container">
+    <img src="/assets/images/logo/logo-bk-grafite.png" alt="BK Lounge Logo">
+  </div>
+
+  <main>
+    <header>
+      <h1>BK Lounge - Delivery</h1>
+    </header>
+
+    <section id="categorias">
+      <h2>Categorias</h2>
+      <!-- Botões ou tabs para categorias como Essências, Carvão, etc -->
+    </section>
+
+    <section id="produtos">
+      <h2>Produtos</h2>
+      <!-- Cards com imagem, nome, preço, botão de adicionar ao carrinho -->
+    </section>
+
+    <section id="carrinho">
+      <h2>Seu Carrinho</h2>
+      <!-- Lista de itens adicionados com opção de remover ou alterar quantidade -->
+    </section>
+
+    <section id="finalizar-pedido">
+      <h2>Finalizar Pedido</h2>
+      <form>
+        <label>Nome completo:<br><input type="text" name="nome" required></label><br>
+        <label>WhatsApp:<br><input type="tel" name="telefone" required></label><br>
+        <label>Rua:<br><input type="text" name="rua" required></label><br>
+        <label>Bairro:<br><input type="text" name="bairro" required></label><br>
+        <label>Número:<br><input type="text" name="numero" required></label><br>
+        <label>Referência:<br><input type="text" name="referencia"></label><br>
+
+        <h3>Forma de Pagamento</h3>
+        <label><input type="radio" name="pagamento" value="pix" required> PIX</label><br>
+        <label><input type="radio" name="pagamento" value="cartao"> Cartão</label><br>
+        <label><input type="radio" name="pagamento" value="dinheiro"> Dinheiro</label><br>
+        <label>Precisa de troco? <input type="text" name="troco" placeholder="Ex: troco pra 50"></label><br>
+
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/delivery.js"></script>
+</body>
+
+</html>
