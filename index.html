@@ -48,9 +48,13 @@
   <section class="ranking" id="ranking">
     <h2><img src="assets/images/icons/trophy.svg" class="icon" alt="Troféu"> Ranking dos Brabos</h2>
     <p>Quem consome mais, aparece no topo e ainda concorre a prêmios durante a noite!</p>
-    <div class="ranking-carousel">
-      <img src="assets/images/lounge/ranking-1.jpeg" alt="Ranking Dia 1">
-      <img src="assets/images/lounge/ranking-2.jpeg" alt="Ranking Dia 2">
+    <div class="ranking-carousel-wrapper">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="ranking-carousel">
+        <img src="assets/images/lounge/ranking-1.jpeg" alt="Ranking Dia 1">
+        <img src="assets/images/lounge/ranking-2.jpeg" alt="Ranking Dia 2">
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
 
@@ -104,6 +108,38 @@
       }
       lastScrollTop = scrollTop;
     });
+
+    // Carrossel automático com navegação manual
+    const carousel = document.querySelector(".ranking-carousel");
+    const next = document.querySelector(".carousel-btn.next");
+    const prev = document.querySelector(".carousel-btn.prev");
+    let autoScroll;
+
+    function scrollNext() {
+      carousel.scrollBy({ left: carousel.offsetWidth, behavior: "smooth" });
+    }
+
+    function scrollPrev() {
+      carousel.scrollBy({ left: -carousel.offsetWidth, behavior: "smooth" });
+    }
+
+    function startAutoScroll() {
+      autoScroll = setInterval(scrollNext, 5000);
+    }
+
+    next.addEventListener("click", () => {
+      scrollNext();
+      clearInterval(autoScroll);
+      startAutoScroll();
+    });
+
+    prev.addEventListener("click", () => {
+      scrollPrev();
+      clearInterval(autoScroll);
+      startAutoScroll();
+    });
+
+    startAutoScroll();
   </script>
 </body>
 
