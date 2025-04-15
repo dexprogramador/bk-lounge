@@ -20,20 +20,32 @@
     <source src="assets/images/lounge/fumaca-video.mp4" type="video/mp4">
   </video>
 
+  <!-- Menu de navegação -->
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#ranking">Ranking</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#localizacao">Endereço</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="delivery.html" class="pedido-destaque">FAÇA SEU PEDIDO ONLINE</a></li>
+    </ul>
+  </nav>
+
   <!-- Seção de Abertura -->
-  <header class="hero">
+  <header class="hero" id="inicio">
     <div class="hero-image">
       <img src="assets/images/lounge/lounge-com-dj.jpeg" alt="Lounge com DJ">
     </div>
     <div class="hero-content">
       <h1>Bem-vindo à BK Lounge</h1>
-      <p>O melhor do rolê em CNP. Ambiente único, narguiles premium e os melhores eventos da cidade.</p>
+      <p>O melhor do rolê em CNP. Ambiente único, festas com DJs ao vivo, promoções exclusivas e os melhores eventos da cidade.</p>
       <a href="delivery.html" class="btn-cta">FAÇA SEU PEDIDO ONLINE</a>
     </div>
   </header>
 
   <!-- Seção Ranking dos Brabos -->
-  <section class="ranking">
+  <section class="ranking" id="ranking">
     <h2><img src="assets/images/icons/trophy.svg" class="icon" alt="Troféu"> Ranking dos Brabos</h2>
     <p>Quem consome mais, aparece no topo e ainda concorre a prêmios durante a noite!</p>
     <div class="ranking-carousel">
@@ -43,7 +55,7 @@
   </section>
 
   <!-- Seção Sobre Nós -->
-  <section class="sobre">
+  <section class="sobre" id="sobre">
     <div class="sobre-content">
       <h2>Sobre a BK Lounge</h2>
       <p>Uma casa pensada para quem curte relaxar com estilo. Aqui você encontra os melhores narguiles, uma galera vibe e noites inesquecíveis ao som dos melhores DJs.</p>
@@ -54,7 +66,7 @@
   </section>
 
   <!-- Seção Localização -->
-  <section class="localizacao">
+  <section class="localizacao" id="localizacao">
     <h2><img src="assets/images/icons/map-pin.svg" class="icon" alt="Localização"> Onde estamos</h2>
     <p>Rua Natal, 127, Centro - CNP, MT</p>
     <div class="map-container">
@@ -63,7 +75,7 @@
   </section>
 
   <!-- Seção Contato -->
-  <section class="contato">
+  <section class="contato" id="contato">
     <h2><img src="assets/images/icons/phone.svg" class="icon" alt="Contato"> Contato</h2>
     <p><img src="assets/images/icons/whatsapp-icon.png" class="icon" alt="WhatsApp"> WhatsApp: <a href="https://wa.me/5565981431429" target="_blank">(65) 98143-1429</a></p>
     <p><img src="assets/images/icons/instagram.svg" class="icon" alt="Instagram"> Instagram:
@@ -79,6 +91,20 @@
 
   <!-- Scripts globais -->
   <script src="js/global.js"></script>
+  <script>
+    // Efeito de menu que aparece ao rolar para cima
+    let lastScrollTop = 0;
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px";
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
 </body>
 
 </html>
