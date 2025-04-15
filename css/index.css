@@ -1,76 +1,201 @@
 /* index.css - Estilo exclusivo para a página inicial da BK Lounge */
 
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #0fffc1, #3f51b5, #000);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
-    color: #fff;
-  }
-  
-  @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 40px 20px;
-    gap: 30px;
-  }
-  
-  .hero-image {
-    flex: 1 1 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .hero-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
-  }
-  
-  .hero-content {
-    flex: 1 1 400px;
-    max-width: 600px;
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-  
-  .btn-cta {
-    background-color: #0fffc1;
-    color: #000;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-cta:hover {
-    background-color: #3f51b5;
-    color: #fff;
-  }
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0fffc1, #3f51b5, #000);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-cta {
+  background-color: #0fffc1;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+/* Ranking */
+.ranking {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ranking h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ranking-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+}
+
+.ranking-carousel img {
+  height: 250px;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00000066;
+}
+
+/* Sobre */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sobre-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.sobre-img {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.sobre-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Localização */
+.localizacao {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.localizacao h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Contato */
+.contato {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contato h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Ícones */
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #00000050;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
