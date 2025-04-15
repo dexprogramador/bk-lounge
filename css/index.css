@@ -3,16 +3,20 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(-45deg, #0fffc1, #3f51b5, #000);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
+  background: #000;
   color: #fff;
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 .hero {
@@ -34,7 +38,7 @@ body {
 
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 420px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
@@ -126,7 +130,7 @@ body {
 
 .sobre-img {
   flex: 1 1 400px;
-  max-width: 500px;
+  max-width: 420px;
 }
 
 .sobre-img img {
@@ -171,6 +175,7 @@ body {
 .icon {
   width: 28px;
   height: 28px;
+  filter: invert(1);
 }
 
 /* WhatsApp flutuante */
