@@ -21,10 +21,11 @@ body {
   pointer-events: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #0fffc1;
   text-shadow:
-  text-shadow: 0 0 6px #0fffc1;
+      text-shadow: 0 0 6px #0fffc1;
 
 }
 
@@ -78,9 +79,17 @@ h1, h2 {
 }
 
 @keyframes pulseGlow {
-  0% { box-shadow: 0 0 10px #0fffc1; }
-  50% { box-shadow: 0 0 20px #0fffc1; }
-  100% { box-shadow: 0 0 10px #0fffc1; }
+  0% {
+      box-shadow: 0 0 10px #0fffc1;
+  }
+
+  50% {
+      box-shadow: 0 0 20px #0fffc1;
+  }
+
+  100% {
+      box-shadow: 0 0 10px #0fffc1;
+  }
 }
 
 .hero {
