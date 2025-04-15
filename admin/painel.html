@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Admin - BK Lounge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="tabs">
+    <button onclick="showTab('pedidos')">Pedidos</button>
+    <button onclick="showTab('produtos')">Produtos</button>
+    <button onclick="showTab('relatorios')">Relatórios</button>
+  </div>
+
+  <div id="pedidos" class="tab-content">
+    <h2>Pedidos</h2>
+    <div id="novos-pedidos"></div>
+    <div id="em-preparo"></div>
+    <div id="em-entrega"></div>
+  </div>
+
+  <div id="produtos" class="tab-content" style="display:none;">
+    <h2>Cadastro de Produtos</h2>
+    <button onclick="abrirModalCategoria()">+ Criar Categoria</button>
+    <div id="lista-categorias"></div>
+  </div>
+
+  <div id="relatorios" class="tab-content" style="display:none;">
+    <h2>Relatórios</h2>
+    <div id="relatorio-vendas"></div>
+  </div>
+
+  <!-- Modais -->
+  <div id="modal-categoria" class="modal">
+    <div class="modal-content">
+      <h3>Criar Categoria</h3>
+      <input type="text" id="nomeCategoria" placeholder="Nome da Categoria" />
+      <input type="number" id="ordemCategoria" placeholder="Ordem" />
+      <button onclick="criarCategoria()">Criar</button>
+      <button onclick="fecharModal('modal-categoria')">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="modal-produto" class="modal">
+    <div class="modal-content">
+      <h3>Criar Produto</h3>
+      <input type="text" id="nomeProduto" placeholder="Nome do Produto" />
+      <input type="text" id="descricaoProduto" placeholder="Descrição" />
+      <input type="number" id="valorProduto" placeholder="Valor (R$)" />
+      <input type="file" id="fotoProduto" />
+      <label><input type="radio" name="temSabores" value="sim" /> Tem sabores</label>
+      <label><input type="radio" name="temSabores" value="nao" checked /> Não tem</label>
+      <div id="saboresInputs" style="display:none;"></div>
+      <button onclick="adicionarMaisSabores()">+ Sabores</button>
+      <button onclick="criarProduto()">Criar Produto</button>
+      <button onclick="fecharModal('modal-produto')">Cancelar</button>
+    </div>
+  </div>
+
+  <audio id="sininho" src="audio/sininho.mp3"></audio>
+
+  <script src="js/painel.js"></script>
+</body>
+</html>
